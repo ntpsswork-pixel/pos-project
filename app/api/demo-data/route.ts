@@ -24,7 +24,7 @@ export async function POST() {
       );
     }
 
-    const createdSales = await prisma.$transaction(async (tx) => {
+    const createdSales = await prisma.$transaction(async (tx: any) => {
       const salesToCreate = 60;
       const created = [];
 
