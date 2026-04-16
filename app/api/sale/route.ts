@@ -42,7 +42,7 @@ export async function POST(req: Request) {
       }
     }
 
-    const sale = await prisma.$transaction(async (tx) => {
+    const sale = await prisma.$transaction(async (tx: any) => {
       for (const item of items) {
         await tx.product.update({
           where: { id: item.id },
